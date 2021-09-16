@@ -15,6 +15,7 @@
 		841A369D26F28B07009DE921 /* Game_EngineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A369C26F28B07009DE921 /* Game_EngineUITests.swift */; };
 		8426107326F297900039DFD2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426107226F297900039DFD2 /* GameView.swift */; };
 		8426107526F341110039DFD2 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8426107426F341110039DFD2 /* MyShaders.metal */; };
+		8426107726F3EB9A0039DFD2 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426107626F3EB9A0039DFD2 /* Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		841A369E26F28B07009DE921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8426107226F297900039DFD2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		8426107426F341110039DFD2 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
+		8426107626F3EB9A0039DFD2 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				841A368426F28B06009DE921 /* Main.storyboard */,
 				8426107226F297900039DFD2 /* GameView.swift */,
 				8426107426F341110039DFD2 /* MyShaders.metal */,
+				8426107626F3EB9A0039DFD2 /* Types.swift */,
 				841A36AA26F28D8B009DE921 /* Other Files */,
 			);
 			path = "Game Engine";
@@ -270,6 +273,7 @@
 				8426107526F341110039DFD2 /* MyShaders.metal in Sources */,
 				841A367C26F28B04009DE921 /* AppDelegate.swift in Sources */,
 				8426107326F297900039DFD2 /* GameView.swift in Sources */,
+				8426107726F3EB9A0039DFD2 /* Types.swift in Sources */,
 				841A368126F28B04009DE921 /* Game_Engine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
