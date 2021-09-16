@@ -17,11 +17,7 @@ class GameView: MTKView {
     var commandQueue : MTLCommandQueue!
     var renderPipelineState : MTLRenderPipelineState!
     
-    let vertices : [SIMD3<Float>] = [
-        SIMD3<Float>(0,1,0),//top middle
-        SIMD3<Float>(-1,-1,0),//bottom left
-        SIMD3<Float>(1,-1,0)//bottom right
-    ]
+    var vertices : [Vertex]!
     
     var vertexBuffer: MTLBuffer!
     
@@ -47,12 +43,23 @@ class GameView: MTKView {
         
         createRenderPipelineState()
         
+        createVertices()
+        
         //create buffers vertex
         createBuffers()
     }
     
+    func createVertices() {
+        vertices = [
+            Vertex(position: SIMD3<Float>(0,1,0), color: SIMD4<Float>(1,0,0,1)),
+            Vertex(position: SIMD3<Float>(-1,-1,0), color: SIMD4<Float>(0,1,0,1)),
+            Vertex(position: SIMD3<Float>(1,-1,0), color: SIMD4<Float>(0,0,1,1)),
+        
+        ]
+    }
+    
     func createBuffers() {
-        vertexBuffer = device?.makeBuffer(bytes: vertices, length: MemoryLayout<SIMD3<Float>>.stride*vertices.count, options: [])
+        vertexBuffer = device?.makeBuffer(bytes: vertices, length: MemoryLayout<Vertex>.stride*vertices.count, options: [])
     }
     
     func createRenderPipelineState() {
