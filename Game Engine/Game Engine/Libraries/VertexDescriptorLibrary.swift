@@ -8,7 +8,7 @@ class VertexDescriptorLibrary {
     
     private static var vertexDescriptors: [VertexDescriptorTypes: VertexDescriptor] = [:]
     
-    public static func intialize(){
+    public static func Intialize(){
         createDefaultVertexDescriptors()
     }
     
