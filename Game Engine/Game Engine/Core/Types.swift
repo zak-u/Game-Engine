@@ -26,11 +26,15 @@ extension sizeable{
 extension SIMD3: sizeable where Scalar == Float {}
 extension Float: sizeable {}
 
-struct Vertex:sizeable {    
+struct Vertex: sizeable {
     var position: SIMD3<Float>
     var color: SIMD4<Float>
 }
 
-struct ModelConstants: sizeable{
+struct ModelConstants: sizeable {
     var modelMatrix = matrix_identity_float4x4
+}
+
+struct SceneConstants: sizeable {
+    var viewMatrix = matrix_identity_float4x4
 }
