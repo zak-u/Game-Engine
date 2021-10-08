@@ -22,6 +22,7 @@ class GameView: MTKView {
         
         self.colorPixelFormat = Preferences.MainPixelFormat
         
+        self.depthStencilPixelFormat = Preferences.MainDepthPixelFormat
         //состояние конвейера рендеринга : Render pipeline state
         /*
          MTL Libriary -> vertex(вершин) shader and fragment shader
