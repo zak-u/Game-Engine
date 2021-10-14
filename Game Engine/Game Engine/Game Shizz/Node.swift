@@ -1,6 +1,7 @@
 import MetalKit
 
 class Node {
+    var name:String = "Node"
     
     var position : SIMD3<Float> = SIMD3<Float>(0,0,0)
     var scale:  SIMD3<Float> =  SIMD3<Float>(1,1,1)
@@ -20,6 +21,11 @@ class Node {
     
     var children : [Node] = []
     
+    init(name:String = "Node"){
+        self.name = name
+        
+    }
+    
     func addChild(_ chaild: Node){
         children.append(chaild)
     }
@@ -32,6 +38,7 @@ class Node {
         }
     
     func render(renderCommandEncoder: MTLRenderCommandEncoder){
+        renderCommandEncoder.pushDebugGroup("Rendering \(name)")
         for child in children {
             child.render(renderCommandEncoder: renderCommandEncoder)
         }
@@ -39,7 +46,7 @@ class Node {
         if let renderable = self as? Renderable {
             renderable.doRender(renderCommandEncoder)
         }
-        
+        renderCommandEncoder.popDebugGroup()
     }
     
 }

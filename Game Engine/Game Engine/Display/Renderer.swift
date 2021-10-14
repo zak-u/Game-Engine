@@ -27,6 +27,8 @@ extension Renderer: MTKViewDelegate{
         guard let drawble = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
         //buffer of our tasks(bf1 computing texture, bf2 render texture)
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
+        commandBuffer?.label = "My Command Buffer"
+        
         /*Command Encoder 4 types:
          - render Command Encoder (render graphics)
          - compute Command Encoder(computation tasks)
@@ -34,6 +36,8 @@ extension Renderer: MTKViewDelegate{
          - parallel Command Encoder (multiple graphic rendaring task)
          */
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        
+        renderCommandEncoder?.label = "First Render Command Encoder"
         //change position
         
         SceneManager.TickScene(renderCommandEncoder: renderCommandEncoder!, deltaTime: 1/Float(view.preferredFramesPerSecond)) 
