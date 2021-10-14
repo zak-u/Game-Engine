@@ -34,6 +34,9 @@
 		84308BCC2700DFFA00B6D134 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84308BCB2700DFFA00B6D134 /* Scene.swift */; };
 		84308BCE2700E22600B6D134 /* SandboxScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84308BCD2700E22600B6D134 /* SandboxScene.swift */; };
 		84308BD12700EAB600B6D134 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84308BD02700EAB600B6D134 /* SceneManager.swift */; };
+		844694D82718A31000EEE9A7 /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = 844694D72718A31000EEE9A7 /* PartyPirateParot.png */; };
+		844694DC2718A51F00EEE9A7 /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844694DB2718A51F00EEE9A7 /* TextureLibrary.swift */; };
+		844694DE2718A6E100EEE9A7 /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844694DD2718A6E100EEE9A7 /* SamplerStateLibrary.swift */; };
 		8446CE4E271845C000785C68 /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE4D271845C000785C68 /* GameTime.swift */; };
 		8446CE51271846FC00785C68 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE50271846FC00785C68 /* Library.swift */; };
 		8446CE532718475A00785C68 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE522718475A00785C68 /* Shader.swift */; };
@@ -107,6 +110,9 @@
 		84308BCB2700DFFA00B6D134 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		84308BCD2700E22600B6D134 /* SandboxScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxScene.swift; sourceTree = "<group>"; };
 		84308BD02700EAB600B6D134 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		844694D72718A31000EEE9A7 /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
+		844694DB2718A51F00EEE9A7 /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
+		844694DD2718A6E100EEE9A7 /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
 		8446CE4D271845C000785C68 /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		8446CE50271846FC00785C68 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		8446CE522718475A00785C68 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 				8426107C26F3FCDF0039DFD2 /* Engine.swift */,
 				8446CE4D271845C000785C68 /* GameTime.swift */,
 				8426107E26F3FF5B0039DFD2 /* Preferences.swift */,
+				844694D62718A29B00EEE9A7 /* res */,
 				8446CE4F2718466100785C68 /* types */,
 				84C1147C2701C9B5008B7930 /* Input */,
 				846154C026FDF17B00F88094 /* maths */,
@@ -289,6 +296,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		844694D62718A29B00EEE9A7 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				844694D72718A31000EEE9A7 /* PartyPirateParot.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		8446CE4F2718466100785C68 /* types */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				84F770E726F7F05300C09C5D /* MeshLibrary.swift */,
+				844694DB2718A51F00EEE9A7 /* TextureLibrary.swift */,
 			);
 			path = libraries;
 			sourceTree = "<group>";
@@ -335,6 +351,7 @@
 				8426108426F4C02A0039DFD2 /* RenderPipelineDescriptorLibrary.swift */,
 				8426108626F4C3370039DFD2 /* RenderPipelineStateLibrary.swift */,
 				842EE782271076300029C8E5 /* DepthStencilStateLibrary.swift */,
+				844694DD2718A6E100EEE9A7 /* SamplerStateLibrary.swift */,
 			);
 			path = libraries;
 			sourceTree = "<group>";
@@ -493,6 +510,7 @@
 			files = (
 				841A368326F28B06009DE921 /* Assets.xcassets in Resources */,
 				841A368626F28B06009DE921 /* Main.storyboard in Resources */,
+				844694D82718A31000EEE9A7 /* PartyPirateParot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +561,7 @@
 				84308BD12700EAB600B6D134 /* SceneManager.swift in Sources */,
 				8426107326F297900039DFD2 /* GameView.swift in Sources */,
 				84F770F026F7FAC800C09C5D /* Node.swift in Sources */,
+				844694DC2718A51F00EEE9A7 /* TextureLibrary.swift in Sources */,
 				8446CE51271846FC00785C68 /* Library.swift in Sources */,
 				846154C226FDF1CE00F88094 /* Math.swift in Sources */,
 				8446CE6427184CC700785C68 /* BasicShaders.metal in Sources */,
@@ -554,6 +573,7 @@
 				84C114802701CBF3008B7930 /* Keycodes.swift in Sources */,
 				84F770EA26F7F6D300C09C5D /* Pointer.swift in Sources */,
 				8446CE68271853F900785C68 /* Quad.swift in Sources */,
+				844694DE2718A6E100EEE9A7 /* SamplerStateLibrary.swift in Sources */,
 				842EE779270F43E50029C8E5 /* Camera.swift in Sources */,
 				8426108726F4C3370039DFD2 /* RenderPipelineStateLibrary.swift in Sources */,
 				84F770ED26F7F8CD00C09C5D /* Renderable.swift in Sources */,

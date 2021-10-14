@@ -9,9 +9,13 @@ class SandboxScene: Scene{
         
         debugCamera.setPositionZ(5)
 
+        quad.setTexture(.PartyPirateParot)
         addChild(quad)
     }
 
+    override func doUpdate() {
+        quad.rotateY(GameTime.DeltaTime)
+    }
 }
 
 //import MetalKit
