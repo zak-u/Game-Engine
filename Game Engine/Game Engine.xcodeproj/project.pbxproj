@@ -48,6 +48,10 @@
 		8446CE6427184CC700785C68 /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE6327184CC700785C68 /* BasicShaders.metal */; };
 		8446CE6627184CDE00785C68 /* InstancedShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE6527184CDE00785C68 /* InstancedShaders.metal */; };
 		8446CE68271853F900785C68 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446CE67271853F900785C68 /* Quad.swift */; };
+		8451050E2718D0F9006FA479 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8451050D2718D0F9006FA479 /* cruiser.obj */; };
+		845105172718D331006FA479 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 845105152718D331006FA479 /* cruiser.mtl */; };
+		845105182718D331006FA479 /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 845105162718D331006FA479 /* cruiser.bmp */; };
+		8451051B2718DB97006FA479 /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451051A2718DB97006FA479 /* Cruiser.swift */; };
 		846154C226FDF1CE00F88094 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846154C126FDF1CE00F88094 /* Math.swift */; };
 		84C1147E2701C9D7008B7930 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1147D2701C9D7008B7930 /* Keyboard.swift */; };
 		84C114802701CBF3008B7930 /* Keycodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1147F2701CBF3008B7930 /* Keycodes.swift */; };
@@ -124,6 +128,10 @@
 		8446CE6327184CC700785C68 /* BasicShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
 		8446CE6527184CDE00785C68 /* InstancedShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = InstancedShaders.metal; sourceTree = "<group>"; };
 		8446CE67271853F900785C68 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		8451050D2718D0F9006FA479 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
+		845105152718D331006FA479 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
+		845105162718D331006FA479 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
+		8451051A2718DB97006FA479 /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
 		846154C126FDF1CE00F88094 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		84C1147D2701C9D7008B7930 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		84C1147F2701CBF3008B7930 /* Keycodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keycodes.swift; sourceTree = "<group>"; };
@@ -299,6 +307,7 @@
 		844694D62718A29B00EEE9A7 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				8451050A2718D098006FA479 /* cruiser */,
 				844694D72718A31000EEE9A7 /* PartyPirateParot.png */,
 			);
 			path = res;
@@ -366,6 +375,16 @@
 			path = shaders;
 			sourceTree = "<group>";
 		};
+		8451050A2718D098006FA479 /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				8451050D2718D0F9006FA479 /* cruiser.obj */,
+				845105162718D331006FA479 /* cruiser.bmp */,
+				845105152718D331006FA479 /* cruiser.mtl */,
+			);
+			path = cruiser;
+			sourceTree = "<group>";
+		};
 		846154C026FDF17B00F88094 /* maths */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +420,7 @@
 				84F770E926F7F6D300C09C5D /* Pointer.swift */,
 				842EE77E27106E490029C8E5 /* Cube.swift */,
 				8446CE67271853F900785C68 /* Quad.swift */,
+				8451051A2718DB97006FA479 /* Cruiser.swift */,
 			);
 			path = "game objects";
 			sourceTree = "<group>";
@@ -508,9 +528,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845105172718D331006FA479 /* cruiser.mtl in Resources */,
+				8451050E2718D0F9006FA479 /* cruiser.obj in Resources */,
 				841A368326F28B06009DE921 /* Assets.xcassets in Resources */,
 				841A368626F28B06009DE921 /* Main.storyboard in Resources */,
 				844694D82718A31000EEE9A7 /* PartyPirateParot.png in Resources */,
+				845105182718D331006FA479 /* cruiser.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +595,7 @@
 				841A368126F28B04009DE921 /* Game_Engine.xcdatamodeld in Sources */,
 				84C114802701CBF3008B7930 /* Keycodes.swift in Sources */,
 				84F770EA26F7F6D300C09C5D /* Pointer.swift in Sources */,
+				8451051B2718DB97006FA479 /* Cruiser.swift in Sources */,
 				8446CE68271853F900785C68 /* Quad.swift in Sources */,
 				844694DE2718A6E100EEE9A7 /* SamplerStateLibrary.swift in Sources */,
 				842EE779270F43E50029C8E5 /* Camera.swift in Sources */,
