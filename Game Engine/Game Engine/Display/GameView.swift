@@ -1,15 +1,8 @@
-//
-//  GameView.swift
-//  Game Engine
-//
-//  Created by Zakhary on 9/16/21.
-//
-
 import MetalKit
 
 class GameView: MTKView {
-    
-    var renderer : Renderer!
+
+    var renderer: Renderer!
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -17,34 +10,27 @@ class GameView: MTKView {
         
         Engine.Ignite(device: device!)
         
-        //color that wil be in the back, when we redraw view
         self.clearColor = Preferences.ClearColor
         
         self.colorPixelFormat = Preferences.MainPixelFormat
         
         self.depthStencilPixelFormat = Preferences.MainDepthPixelFormat
-        //состояние конвейера рендеринга : Render pipeline state
-        /*
-         MTL Libriary -> vertex(вершин) shader and fragment shader
-        Render pipeline descriptor:
-         - color attachments (pixel Format !!!)
-         - vertex function
-         - fragment function
-         */
+        
         self.renderer = Renderer(self)
         
         self.delegate = renderer
     }
+    
 }
 
 //--- Keyboard Input ---
 extension GameView {
     override var acceptsFirstResponder: Bool { return true }
-        
+    
     override func keyDown(with event: NSEvent) {
         Keyboard.SetKeyPressed(event.keyCode, isOn: true)
     }
-        
+    
     override func keyUp(with event: NSEvent) {
         Keyboard.SetKeyPressed(event.keyCode, isOn: false)
     }
@@ -119,3 +105,5 @@ extension GameView {
     }
     
 }
+
+

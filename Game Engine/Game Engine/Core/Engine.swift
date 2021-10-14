@@ -3,25 +3,20 @@ import MetalKit
 class Engine {
     
     public static var Device: MTLDevice!
-    public static var CommandQueue : MTLCommandQueue!
+    public static var CommandQueue: MTLCommandQueue!
+    public static var DefaultLibrary: MTLLibrary!
     
     public static func Ignite(device: MTLDevice){
         self.Device = device
         self.CommandQueue = device.makeCommandQueue()
+        self.DefaultLibrary = device.makeDefaultLibrary()
         
-        ShaderLibrary.Initialize()
+        Graphics.Initialize()
+
+        Entities.Initialize()
         
-        VertexDescriptorLibrary.Intialize()
+        SceneManager.Initialize(Preferences.StartingSceneType)
         
-        DepthStencilStateLibrary.Intitialize() 
-        
-        RenderPipelineDescriptorLibrary.Initialize()
-        
-        RenderPipelineStateLibrary.Initialize()
-        
-        MeshLibrary.Initialize()
-        
-        SceneManager.Initialize(Preferences.StartingSceneType )
     }
     
 }
